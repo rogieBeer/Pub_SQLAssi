@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:be6f62aa-90e0-4d05-97ee-e5f1bcb81732'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='NZCSA'
+   visibility='public'/>
+</xmi:XMI>

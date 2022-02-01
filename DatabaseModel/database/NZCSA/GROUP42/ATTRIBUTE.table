@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>ATTRIBUTE</name>
+  <columns>
+    <column>
+      <name>PREREQUISITE_NUMBER</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>QUAL_CODE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PREREQUISITE_QUALIFICATION_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PREREQUISITE_NUMBER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ATTRIBUTE</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>QUAL_CODE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ATTRIBUTE</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PREREQUISITE_QUALIFICATION_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>ATTRIBUTE</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PREREQUISITE_QUALIFICATIO_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PREREQUISITE_NUMBER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ATTRIBUTE</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PREREQUISITE_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PREREQUISITE</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PREREQUISITE_QUALIFICATIO_FK2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>QUAL_CODE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ATTRIBUTE</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>QUALIFICATION_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>QUALIFICATION</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>PREREQUISITE_QUALIFICATION_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>PREREQUISITE_NUMBER</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>QUAL_CODE</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>GROUP42</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>GROUP42</name>
+  </schema>
+</table>

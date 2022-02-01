@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>ENROL</name>
+  <columns>
+    <column>
+      <name>ENROL_NUMBER</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>TRAINING_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>ENROL_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ENROL_NUMBER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ENROL</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>ENROL_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>ENROL</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>CAN</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ENROL</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>APPLICANT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>HAS_SESSION</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>TRAINING_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>ENROL</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>TRAINING_SESSION_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>TRAINING_SESSION</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>ENROL_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ENROL_NUMBER</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>GROUP42</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>GROUP42</name>
+  </schema>
+</table>

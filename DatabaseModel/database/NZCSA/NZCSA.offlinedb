@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProviderSettings xmlns="http://xmlns.oracle.com/ide/hash">
+   <hash n="dataTypeSettings">
+      <value n="databaseType" v="Oracle Database"/>
+      <value n="databaseVersion" v="12102"/>
+   </hash>
+   <value n="id" v="5067f83d-16c1-47da-9c23-fcbd0c9244a8"/>
+   <value n="name" v="NZCSA"/>
+   <value n="offlineDBSchema" v="GROUP42"/>
+</ProviderSettings>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:bc3318e8-1e5c-4584-b731-6ff5ef7bd8fa'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name=''
+   visibility='public'/>
+</xmi:XMI>

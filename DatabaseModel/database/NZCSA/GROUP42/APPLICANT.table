@@ -1,0 +1,188 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>APPLICANT</name>
+  <columns>
+    <column>
+      <name>APPLICANT_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <identityProperties>
+        <generated>ALWAYS</generated>
+        <incrementBy>1</incrementBy>
+        <maxValue>999999999999</maxValue>
+        <minValue>1</minValue>
+        <startWith>1</startWith>
+      </identityProperties>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>CREATION_DATE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_FNAME</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_LNAME</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_DOB</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_PHONE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_EMAIL</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">100</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ADDRESS_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>APPLICANT_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>APPLICANT</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>APPLICANT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>APPLICANT_HAS_ADDRESS</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ADDRESS_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>APPLICANT</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>ADDRESS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>ADDRESS</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>APPLICANT_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>APPLICANT_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>GROUP42</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>GROUP42</name>
+  </schema>
+</table>

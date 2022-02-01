@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:69d6daa1-fd48-4d76-ac65-c3010ac83701'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Employee'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:bdf6fbc7-52ec-46d3-b5f3-eff823fe297f'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='First_Name'
+    aggregation='none'
+    visibility='package'>
+   <type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:c8b0a8cc-4636-4fba-b640-d791324e6d2b'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:5b3e800e-3ef7-4eff-af5f-58db4d967dbc'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

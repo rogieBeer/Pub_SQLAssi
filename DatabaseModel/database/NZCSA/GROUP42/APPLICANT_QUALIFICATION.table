@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>APPLICANT_QUALIFICATION</name>
+  <columns>
+    <column>
+      <name>APPLICANT_QUALIFICATION_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>APPLICANT_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>QUAL_CODE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>AQ_START_DATE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>AQ_FINISH_DATE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>APPLICANT_QUALIFICATION_NUMBER</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT_QUALIFICATION_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>APPLICANT_QUALIFICATION</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>APPLICANT_QUALIFICATION_NUMBER</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT_QUALIFICATION</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>APPLICANT_QUAL_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>APPLICANT_QUALIFICATION</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>APPLICANT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>APPLICANT</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>APPLICANT_QUAL_FK2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>QUAL_CODE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>APPLICANT_QUALIFICATION</name>
+            <schemaName>GROUP42</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GROUP42</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>QUALIFICATION_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>QUALIFICATION</name>
+          <schemaName>GROUP42</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GROUP42</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>APPLICANT_QUALIFICATION_NUMBER</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>APPLICANT_QUALIFICATION_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>GROUP42</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>GROUP42</name>
+  </schema>
+</table>

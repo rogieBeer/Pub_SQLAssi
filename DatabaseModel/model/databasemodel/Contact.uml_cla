@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:a34348ca-f911-46e6-8b5b-a3f47c6d7d31'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Contact'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:b14431c1-3c09-4efe-9ddd-1d0fca7a2eeb'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='email'
+    aggregation='none'
+    visibility='package'>
+   <type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:5e816baf-e2c7-456f-8495-7a4d1bde69a9'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:4c3590a1-6be8-4e10-b32f-4155f3d18c68'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>
